@@ -10,6 +10,13 @@
     color: #333
 }
 
+h1,
+h2,
+h3,
+h4{
+    margin-bottom: 1rem;
+}
+
 h1{
     font-size: 5.4rem;
     color: #56a5eb;
