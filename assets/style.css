@@ -10,6 +10,13 @@
     color: #333
 }
 
+body{
+    background-image: url(https://64.media.tumblr.com/ae82a685a84d00eee6195291e3de1b61/64ec2bc94fd569a4-50/s2048x3072/3a399c4ff7d681f51e84efc307f4dbe6b2d145e9.jpg);
+    background-repeat: none;
+    background-size: auto;
+    background-size: 1920px auto;
+}
+
 h1,
 h2,
 h3,
@@ -19,7 +26,8 @@ h4{
 
 h1{
     font-size: 5.4rem;
-    color: #56a5eb;
+    color: #ff6a80;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin-bottom: 5rem;
 }
 
@@ -32,6 +40,8 @@ h2{
     font-size: 4.2rem;
     margin-bottom: 4rem;
     font-weight: 700;
+    color: #76ecbe;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 h3{
@@ -84,10 +94,11 @@ h3{
     padding: 1rem 0;
     width: 20rem;
     text-align: center;
-    border: 0.1rem solid #56a5eb;
+    border: 0.1rem solid #FF6A80;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #56a5eb;
+    color: #ff6a80;
+    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */ */
     background-color: white;
 }
 

@@ -16,10 +16,15 @@
 
 .choice-prefix{
     padding: 1.5rem 2.5rem;
-    background-color: #56a5eb;
+    background-color: #76ecbe;
     color: white;
 }
 
 .choice-text{
     padding: 1.5rem;
+}
+
+.question{
+    color: #76ecbe;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
