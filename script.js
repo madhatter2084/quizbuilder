@@ -2,7 +2,6 @@ console.log("The game beings!")
 
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-console.log(choices);
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -101,7 +100,6 @@ startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    console.log(availableQuestions);
     getNewQuestion();
 };
 
@@ -122,16 +120,28 @@ getNewQuestion = () => {
     availableQuestions.splice(questionIndex, 1);
 
     acceptingAnswers = true;
-}
+};
 
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
-        console.log(e.target);
         if(!acceptingAnswers) return;
+
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        getNewQuestion();
+
+        const classToApply = 
+            selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+           
+        selectedChoice.parentElement.classList.add(classToApply);
+            
+            setTimeout( () => {
+                selectedChoice.parentElement.classList.remove(classToApply);
+                getNewQuestion();
+            }, 1000);
+            
+
+        
     });
 
 });
