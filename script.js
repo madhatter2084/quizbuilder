@@ -1,5 +1,3 @@
-console.log("The game beings!")
-
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
@@ -107,7 +105,8 @@ startGame = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS){
-        return window.location.assign("/end.html")
+        localStorage.setItem("mostRecentScore", score);
+        return window.location.assign("./end.html")
     };
     questionCounter++;
     questionCounterText.innerText = questionCounter + "/" + MAX_QUESTIONS;
@@ -156,4 +155,3 @@ choices.forEach(choice => {
 
 
 startGame();
-
