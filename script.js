@@ -153,5 +153,24 @@ choices.forEach(choice => {
     scoreText.innerText = score;
 };
 
+var timeEl = document.querySelector(".time");
+var mainEl = document.getElementById("main");
+
+var secondsLeft = 50;
+
+function setTime() {
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+    timeEl.textContent = secondsLeft;
+
+    if(secondsLeft === 0) {
+        localStorage.setItem("mostRecentScore", score);
+        return window.location.assign("end.html");
+    }
+
+  }, 1000);
+}
+
+setTime();
 
 startGame();
